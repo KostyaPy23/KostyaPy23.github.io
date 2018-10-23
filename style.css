@@ -1,0 +1,67 @@
+body {
+  font-family: 'Raleway', sans-serif;
+  height: 100vh;
+  background-color: #333;
+  background-image: url('DSC100511618.jpg');
+  background-size: cover;
+  color: #000000;
+  overflow: hidden;
+  margin: 0;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  height: 100%;
+}
+
+.content {
+  margin-top: 100px;
+  padding: 20px;
+}
+
+h1, h2 {
+  margin: 0.3rem;
+  font-weight: 700;
+}
+
+h1 {
+  font-size: 3.5rem;
+}
+
+h2 {
+  font-size: 2rem;
+  color: #000000;
+}
+
+.txt {
+  position: relative;
+  border-right: .2px solid #000000;
+}
+
+@media (min-width: 1200px) {
+  h1 {
+    font-size: 5rem;
+  }
+}
+
+@media (max-width: 800px) {
+  .container {
+    padding: 0 1 rem;
+  }
+
+  h1 {
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 500px) {
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+}
