@@ -8,6 +8,7 @@ class TypeWrighter {
     this.type();
     this.isDeleting = false;
   }
+
   type() {
     const current = this.wordIndex % this.words.length
     const fullTxt = this.words[current];
@@ -40,7 +41,7 @@ class TypeWrighter {
 }
 
 // Init On DOM Load
-document.addEventListener('DOMContentLoaded', init);
+// document.addEventListener('DOMContentLoaded', init);
 
 function init() {
   const txtElement = document.querySelector('.txt-type');
