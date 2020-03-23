@@ -1,0 +1,37 @@
+<div class="container">
+  <div class="row">
+    <div class="col-9">
+      <div class="columns" cdkDropListGroup>
+        <div class="column-item" cdkDropList [cdkDropListData]="doFirs" (cdkDropListDropped)="drop($event)">
+          <div class="columns-item--title">
+            <span>Do first</span>
+            <button type="button" class="columns-item--btn__add" (click)="addNewItem()">
+              <i class="fas fa-plus-square">+</i>
+            </button>
+          </div>
+          <ul class="tasks-list" *ngFor="let task of doFirs" cdkDrag>
+            <app-task [taskItem]="task"></app-task>
+          </ul>
+        </div>
+
+        <div class="column-item" cdkDropList [cdkDropListData]="schedule" (cdkDropListDropped)="drop($event)">
+          <div class="columns-item--title">
+            <span>Schedule</span>
+            <button type="button" class="columns-item--btn__add" (click)="addNewItem()">
+              <i class="fas fa-plus-square">+</i>
+            </button>
+          </div>
+          <ul class="tasks-list" *ngFor="let task of schedule" cdkDrag>
+            <app-task [taskItem]="task"></app-task>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-3">
+      <ul class="tasks-list">
+        <app-task></app-task>
+      </ul>
+    </div>
+  </div>
+</div>
