@@ -1,37 +1,12 @@
 /* You can add global styles to this file, and also import other style files */
+@import "./app/scss/normalize";
+@import "./app/scss/grid";
 
 .columns {
   width: 100%;
   display: grid;
-  grid-gap: 4px;
-  grid-template-columns: 33% 33% 33%;
-
-  .columns-item {
-    height: auto;
-    min-height: 200px;
-    border: 1px solid #333;
-    border-radius: 8px;
-    background-color: #dfe3e6;
-    font-family: Helvetica Neue,Arial,Helvetica,sans-serif;
-
-    .columns-item--title {
-      font-size: 24px;
-      text-align: center;
-      border-bottom: 1px solid green;
-
-      .columns-item--btn__add {
-        float: right;
-        margin-right: 8px;
-        color: rgba(34,139,34,1);
-        line-height: normal;
-        cursor: pointer;
-
-        &:hover {
-          color: rgba(34,139,34,0.5);
-        }
-      }
-    }
-  }
+  grid-gap: $gutter;
+  grid-template-columns: 50% 50%;
 }
 
 

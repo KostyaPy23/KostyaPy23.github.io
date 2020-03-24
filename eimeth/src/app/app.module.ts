@@ -4,17 +4,21 @@ import { DragDropModule } from '@angular/cdk/drag-drop';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { TaskComponent } from './components/task/task.component';
+import { TaskListCard } from './components/task-list-card/task-list-card.component';
+import { FormsModule } from "@angular/forms";
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
     AppComponent,
-    TaskComponent
+    TaskListCard
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     DragDropModule,
+    FormsModule,
+    NgbModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

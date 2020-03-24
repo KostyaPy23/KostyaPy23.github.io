@@ -1,0 +1,17 @@
+<div class="card" cdkDropList [cdkDropListData]="todoStore" (cdkDropListDropped)="drop($event)">
+  <header class="card-header">
+    <h3>{{cardTitle}}</h3>
+  </header>
+  <div class="card-content">
+    <input type="text" placeholder="What needs to be done first?" autofocus="" [(ngModel)]="newTodo.title" (keyup.enter)="addTodo()">
+    <ul>
+      <li *ngFor="let taskItem of todoStore" [class.completed]="taskItem.complete" cdkDrag>
+        <div class="view">
+          <input class="toggle" type="checkbox" (click)="toggleComplete(taskItem)" [checked]="taskItem.complete">
+          <input type="text" [value]="taskItem.title" (keyup)="updateTodo(taskItem)">
+          <button class="destroy" (click)="removeTodo(taskItem)"></button>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>
